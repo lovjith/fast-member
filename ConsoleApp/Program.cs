@@ -17,7 +17,7 @@ namespace ConsoleApp
             watch.Start();
             using (var con = new SqlConnection("Data Source=10.10.10.200;Initial Catalog=Ofac;User ID=sa;Password=Password11"))
             {
-                var cmd = new SqlCommand("SELECT * FROM Sdn;", con);
+                var cmd = new SqlCommand("SELECT Id, _id, FirstName, Name2, Name3, Name4, Name5, LastName, RecordStateDate FROM Sdn;", con);
                 con.Open();
                 var reader = cmd.ExecuteReader(behavior: System.Data.CommandBehavior.CloseConnection);
 
